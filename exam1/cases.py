@@ -27,11 +27,16 @@ def camel2snake(word):
             snake += char
     return snake
 
-# def snake2camel(word):
-#     camel = ""
-#     for char in word:
-#         if char == "_":
-#             camel += char.upper()
-#         else:
-#             camel += char
-#     return camel
+def snake2camel(word):
+    camel = ""
+    cap_next_letter = False
+    for char in word:
+        if char == "_":
+            cap_next_letter = True
+        else:
+            if cap_next_letter:
+                camel += char.upper()
+                cap_next_letter = False
+            else:
+                camel += char
+    return camel
