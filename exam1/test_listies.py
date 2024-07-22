@@ -35,7 +35,7 @@ class listiesTest(unittest.TestCase):
 
         for tt_in, expected in test_cases:
             with self.subTest(f"{tt_in} -> {expected}"):
-                self.assertEqual(expected, listies.drop_first_two(tt_in))
+                self.assertEqual(expected, listies.drop_last_two(tt_in))
 
 
     def test_drop_mangle(self):

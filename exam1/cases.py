@@ -18,7 +18,20 @@ Assume that the user’s input will indeed be in camel case.
 '''
 Now make one that does the opposite: snake2camel()
 '''
+def camel2snake(word):
+    snake = ""
+    for char in word:
+        if char.isupper():
+            snake += "_" + char.lower()
+        else:
+            snake += char
+    return snake
 
-
-def foo():
-    pass
+# def snake2camel(word):
+#     camel = ""
+#     for char in word:
+#         if char == "_":
+#             camel += char.upper()
+#         else:
+#             camel += char
+#     return camel
