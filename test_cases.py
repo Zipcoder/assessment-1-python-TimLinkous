@@ -32,3 +32,4 @@ class CasesTest(unittest.TestCase):
             with self.subTest(f"{word} -> {expected}"):
                 self.assertEqual(expected, cases.snake2camel(word))
 
+###Test

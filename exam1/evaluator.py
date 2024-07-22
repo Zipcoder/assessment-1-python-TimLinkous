@@ -11,7 +11,8 @@ def find_lowest_value(list_in: List[N]) -> N:
     :param list_in: A list of numbers (integers and/or floats)
     :return: The lowest number in the list
     """
-    pass  # implement me
+    return min(list_in)
+    #pass  # implement me
 
 
 def find_highest_value(list_in: List[N]) -> N:
@@ -21,7 +22,8 @@ def find_highest_value(list_in: List[N]) -> N:
     :param list_in: A list of numbers (integers and/or floats)
     :return: The highest number in the list
     """
-    pass  # implement me
+    return max(list_in)
+    #pass  # implement me
 
 
 def find_value(value_to_find, values: C) -> int:
@@ -34,6 +36,7 @@ def find_value(value_to_find, values: C) -> int:
     :param values: A List or a Set.
     :return: an integer. Either the index where the value exists or -1
     """
+    
     pass  # implement me
 
 
@@ -49,7 +52,13 @@ def compare_two_numbers(a: N, b: N) -> int:
     :param b: The second number.
     :return: an integer 0, 1, or -1
     """
-    pass  # implement me
+    if a == b:
+        return 0
+    elif a > b:
+        return 1
+    else: 
+        return -1
+    #pass  # implement me
 
 
 def compare_two_strings(a: str, b: str) -> int:
@@ -64,7 +73,13 @@ def compare_two_strings(a: str, b: str) -> int:
     :param b: The second string.
     :return: an integer 0, 1, or -1
     """
-    pass  # implement me
+    if len(a) == len(b):
+        return 0
+    elif len(a) > len(b):
+        return 1
+    else: 
+        return -1
+    #pass  # implement me
 
 
 def find_common(tuple_a: Tuple, tuple_b: Tuple) -> Set:
