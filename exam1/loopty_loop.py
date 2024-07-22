@@ -10,7 +10,14 @@ def generate_list(start: int, stop: int, step: int = 1) -> List[int]:
     :param step: How many digits apart each number is from the others around it.
     :return: A list of integers.
     """
-    pass  # implement me
+    
+    result = []
+    for i in range(start, stop, step):
+        result.append(i)
+    return result
+   
+
+    #pass  # implement me
 
 
 def generate_list_with_strategy(start: int, stop: int, step: int, strategy: Callable) -> List[int]:
@@ -23,4 +30,8 @@ def generate_list_with_strategy(start: int, stop: int, step: int, strategy: Call
     :param strategy: A function to manipulate each digit .
     :return: A list of integers.
     """
-    pass  # implement me
+    result = []
+    for i in range(start, stop, step):
+        result.append(strategy(i))
+    return result
+    # pass  # implement me

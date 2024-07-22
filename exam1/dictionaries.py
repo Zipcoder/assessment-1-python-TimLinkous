@@ -3,14 +3,17 @@ def delete_keys_from_dict(datadict, keylist):
     """
     Delete a list of keys from a dictionary
     """
-    pass
+    del datadict[keylist]
+    return datadict
+    #pass
 
 def check_dict_for_key(datadict, key):
     """
     Check if a value exists in a dictionary
     (NO FOR loops!)
     """
-    pass
+    return datadict.get(key)
+    #pass
 
 def get_key_of_min_value(ddd):
     """

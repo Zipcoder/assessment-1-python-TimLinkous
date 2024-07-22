@@ -36,8 +36,12 @@ def find_value(value_to_find, values: C) -> int:
     :param values: A List or a Set.
     :return: an integer. Either the index where the value exists or -1
     """
-    
-    pass  # implement me
+   
+    if value_to_find in values:
+        return values.index(value_to_find)
+    else: 
+        return -1
+    #pass  # implement me
 
 
 def compare_two_numbers(a: N, b: N) -> int:
@@ -90,7 +94,9 @@ def find_common(tuple_a: Tuple, tuple_b: Tuple) -> Set:
     :param tuple_b: The second tuple.
     :return: A set containing items common on both tuples.
     """
-    pass  # implement me
+    result = {item for item in tuple_a for item2 in tuple_b if item == item2}
+    return result
+    #pass  # implement me
 
 
 def find_duplicates(tuple_in: Tuple) -> List:
@@ -100,4 +106,11 @@ def find_duplicates(tuple_in: Tuple) -> List:
     :param tuple_in: A tuple
     :return: a A list containing duplicate items in the tuple_in parameter
     """
-    pass  # implement me
+    result = list(set([item for item in tuple_in if tuple_in.count(item) > 1]))
+    return result
+    
+    #for i in tuple_in:
+        #if tuple_in.count(i) > 0:
+           # return [i]    
+        
+        #pass  # implement me
